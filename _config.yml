@@ -91,3 +91,21 @@ search:
 
 # 跳过渲染README.md
 # skip_render: README.md
+
+# 人物模型
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-wanko
+  display:
+    position: right
+    width: 150
+    height: 150
+  mobile:
+    show: true

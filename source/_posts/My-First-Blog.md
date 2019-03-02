@@ -1,7 +1,8 @@
 ﻿---
 title: My First Blog
 date: 2019-03-01 14:25:21
-tags: 生活
+tags: 随记
+categories: 生活
 ---
 
 哈哈，这是我第一次写hexo博客哟(＾Ｕ＾)ノ~ＹＯ
