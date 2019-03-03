@@ -79,7 +79,7 @@ theme: hexo-theme-next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/TheRotation/therotation.github.io.git
+  repository: git@github.com:TheRotation/therotation.github.io.git
   branch: master
 
 # 搜索服务Local Search
@@ -105,7 +105,7 @@ live2d:
     use: live2d-widget-model-wanko
   display:
     position: right
-    width: 150
-    height: 150
+    width: 120
+    height: 77
   mobile:
     show: true
