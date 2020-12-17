@@ -10,7 +10,7 @@ description: 这是我用Github+Hexo框架搭建的个人博客，网上也有�
 
  
 
-### 第一步：环境安装
+## 第一步：环境安装
 
 1. <a href="http://nodejs.cn/download">下载安装Node.js</a>：安装完毕打开cmd命令行分别输入，显示版本号即为成功。
 
@@ -21,17 +21,17 @@ description: 这是我用Github+Hexo框架搭建的个人博客，网上也有�
 
 2. <a href="https://git-scm.com/downloads">下载安装Git</a>：安装完毕后在桌面右击鼠标，当出现 Git GUI Here 和 Git Bash Here 即为成功。
 
-   <br/>
+   
 
-### 第二步：新建Github项目库
+## 第二步：新建Github项目库
 
 1. <a href="https://github.com">注册Github</a>：确定用户名和邮箱，以后各种链接会建立在用户名和邮箱上，不建议修改。
 
 2. 新建GitHub项目仓库：命名为 <span style="color:red">**用户名.github.io**</span>，勾选 **Initialize this repository with a README** 选项。创建完毕后就可用 **https://用户名.github.io** 访问到自己的博客。
 
-   <br/>
+   
 
-### 第三步：Hexo框架安装与本地测试
+## 第三步：Hexo框架安装与本地测试
 
 1. 在合适的位置创建文件夹，文件夹名自定义，例如：在F盘下创建一个名为 blog 的文件夹。
 
@@ -64,12 +64,12 @@ description: 这是我用Github+Hexo框架搭建的个人博客，网上也有�
 7. 进入到 **blog\source\\_posts**目录查看新建的文章，编辑文本后保存。在blog文件夹下执行命令，用于开启本地服务器，成功开启后在浏览器中打开 **localhost:4000**，即可本地访问新创建的文章。
 
    ```
-   hexo server
+   hexo server 或 hexo s
    ```
 
-<br/>
 
-### 第四步：配置主题
+
+## 第四步：配置主题
 
 > 配置主题的步骤大致如下，配置步骤详情请看官网
 >
@@ -110,9 +110,9 @@ description: 这是我用Github+Hexo框架搭建的个人博客，网上也有�
 
 Hexo会自动合并主题中的 **_config.yml** 和  **_config.butterfly.yml** 里的配置，如果存在同名配置，会使用 **_config.butterfly.yml** 的配置，其优先度较高。
 
-<br/>
 
-### 第五步：上传项目
+
+## 第五步：上传项目
 
 > 要想将项目上传至 github 需要用 git 生成 SSH秘钥，通过 **SSH秘钥** 方可将本地项目和 github 联系起来，具体步骤如下：
 
@@ -131,7 +131,7 @@ Hexo会自动合并主题中的 **_config.yml** 和  **_config.butterfly.yml** �
    ls -al ~/.ssh
    ```
 
-4. 生成SSH密钥（直接按回车）：（秘钥默认生成存储路径是：**C:\Users\Administrator.ssh**）
+4. 生成SSH密钥（直接按回车）：（密钥默认生成存储路径是：**C:\Users\Administrator.ssh**）
 
    ```
    ssh-keygen -t rsa -C "Github绑定邮箱"
@@ -145,7 +145,7 @@ Hexo会自动合并主题中的 **_config.yml** 和  **_config.butterfly.yml** �
 
 6. 登录 github 进入头像下的 **settings** 中点击 **SSH and GPG keys** 选项。
 
-7. 点击 **New SSH key** 添加 SSH秘钥, title 任意取 ，将<span style="color:red">**SSH秘钥**</span>粘贴到 Key 中并保存。
+7. 点击 **New SSH key** 添加 SSH密钥, title 任意取 ，将<span style="color:red">**SSH密钥**</span>粘贴到 Key 中并保存。
 
 8. 输入代码，若回复你的用户名则绑定成功。
 
@@ -155,7 +155,14 @@ Hexo会自动合并主题中的 **_config.yml** 和  **_config.butterfly.yml** �
 
 9. 接着进入到自己的仓库点击绿色按钮 **Clone or download** 选择 **Use SSH** 复制地址。
 
-10. 打开blog文件夹下的配置文件**_config.yml**找到 **deploy**，粘贴SSH密钥到**repository**属性处（没有则自建，注意.yml文本格式）。
+10. 打开blog文件夹下的配置文件**_config.yml**找到 **deploy**，粘贴SSH密钥到**repository**属性处。<span style="color:red">**（若缺少属性请自建补充，注意.yml文本格式）**</span>
+
+    ```
+    deploy:
+      type: git
+      repository: SSH密钥
+      branch: master
+    ```
 
 11. 若想生成和部署文章到GitHub，还需要执行命令安装扩展。
 
@@ -167,10 +174,10 @@ Hexo会自动合并主题中的 **_config.yml** 和  **_config.butterfly.yml** �
 
     ```
     hexo clean
-    hexo d -g
+    hexo d -g					/*发布网站并推送静态文件到master分支*/						
     ```
 
-    <br/>
+    
 
 
 
