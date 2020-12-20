@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: THEROTATION
-subtitle: 旋木的博客
-description: Hi! 欢迎来到旋木的博客哟~
+title: Hexo
+subtitle: ''
+description: ''
 keywords:
-author: THEROTATION
-language: zh-CN
+author: John Doe
+language: en
 timezone: ''
 
 # URL

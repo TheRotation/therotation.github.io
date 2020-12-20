@@ -106,7 +106,16 @@ description: 这是我用Github+Hexo框架搭建的个人博客，网上也有�
 为了减少升级主题后带来的不便，也可使用以下方法。
 
 1. 此方法只支持 Hexo 5.0.0 以上版本，建议使用。如果已经在创建了 ，请删除掉**source/_data/butterfly.yml**
-2. 将主题文件夹中的  **_config.yml** 复制到 blog根目录里，同时重新命名为 **_config.butterfly.yml**，以后只需要在 **_config.butterfly.yml** 进行配置就行。
+
+2. 将主题文件夹中的  **_config.yml** 拷贝一份并重新命名为 **_config.butterfly.yml**，然后复制到 blog根目录里。
+
+3. 修改blog根目录配置文件**_config.yml**，把主題改為butterfly
+
+   ```
+   theme: butterfly
+   ```
+
+4. 删除blog根目录原有默认的  **_config.landscape.yml** 配置文件，以后只需要在  **_config.butterfly.yml**  进行主题配置就行。
 
 Hexo会自动合并主题中的 **_config.yml** 和  **_config.butterfly.yml** 里的配置，如果存在同名配置，会使用 **_config.butterfly.yml** 的配置，其优先度较高。
 
